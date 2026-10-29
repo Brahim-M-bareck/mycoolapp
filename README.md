@@ -56,11 +56,27 @@ Exemple avec curl :
 curl -u abdou:cHk3694 http://localhost:8080/actuator/health
 ```
 
+## Captures d'ecran
+
+Les preuves demandees sont disponibles dans le dossier `image/` :
+
+| Element demande | Capture |
+| --- | --- |
+| Reponse de `/` | [`image/Capture3.png`](image/Capture3.png) |
+| Reponse de `/teaminfo` | [`image/Capture4.png`](image/Capture4.png) |
+| Reponse de `/actuator/health` | [`image/Capture5.png`](image/Capture5.png) |
+| Reponse de `/actuator/info` | [`image/Capture6.png`](image/Capture6.png) |
+| `/actuator/beans` sans identifiants : 401 | [`image/Capture7.png`](image/Capture7.png) |
+| `/actuator/beans` avec identifiants : 200 | [`image/Capture8.png`](image/Capture8.png) |
+| Console : demarrage sur le port 8585 | [`image/Capture9.1.png`](image/Capture9.1.png) |
+| `/actuator/health` sur le port 8585 | [`image/Capture9.2.png`](image/Capture9.2.png) |
+
 ## Structure du projet
 
 ```
 mycoolapp/
   data/team.txt
+  image/                      captures d'ecran du rendu
   src/main/java/com/tp1/mycoolapp/
     MycoolappApplication.java
     FunRestController.java
@@ -69,6 +85,8 @@ mycoolapp/
     application.properties
     application-dev.properties
     application-prod.properties
+  src/test/java/com/tp1/mycoolapp/
+    MycoolappApplicationTests.java
   pom.xml
   REPONSES.md
   COMPREHENSION.md
